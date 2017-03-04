@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Riot - Leonardo Faria</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/github.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img src="img/riot.png" width="50%">
+        </section>
+
+        <section>
+          <h1>In a nutshell</h1>
+
+          <ul>
+            <li>React-like component-based UI library</li>
+            <li>Based on custom tags</li>
+            <li>Simple and minimalist</li>
+            <li>Small learning curve, small API</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>In a nutshell</h1>
+
+          <ul>
+            <li>Tooling friendly: ES6, Typescript, CoffeeScript...</li>
+            <li>Close to standards: no polyfills, additional libs</li>
+            <li>Plays well with jQuery</li>
+            <li><a href="http://riotjs.com/guide/">One page guide</a></li>
+            <li><a href="https://github.com/jimsparkman/RiotControl">RiotControl</a> as event controller solution</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Why not React.js?</h1>
+
+          <ul>
+            <li>React is 4x bigger than Riot</li>
+            <li>No JSX</li>
+            <li><a href="http://riotjs.com/compare/">Compare</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">~15 years trying to make everyone separate HTML, JS &amp; CSS. And then suddenly everything went south and we’re writing code like this. <a href="https://t.co/NnmJmPvEgp">pic.twitter.com/NnmJmPvEgp</a></p>&mdash; Thomas Fuchs (@thomasfuchs) <a href="https://twitter.com/thomasfuchs/status/810885087214637057">December 19, 2016</a></blockquote>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </section>
+
+        <section>
+        	<h1>Example</h1>
+
+          <pre class="language-html"><code>
+<!-- example.html -->
+<hello-world></hello-world>
+
+<script src="//cdn.jsdelivr.net/riot/3.3.1/riot+compiler.min.js"></script>
+<script type="riot/tag" src="example.js"></script>
+<script type="text/javascript">
+  riot.mount('hello-world')
+</script>
+          </code></pre>
+
+          <pre class="language-html"><code>
+<!-- example.js -->
+<hello-world>
+  <h3>{message}</h3>
+
+  this.message = 'Hello World!!!';
+</hello-world>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>More examples</h1>
+
+          <img src="img/dog.gif">
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        history: true,
+        progress: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
